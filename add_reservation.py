@@ -2,6 +2,7 @@
 #Script made for specific kea setup when mysql backend is used as reservations database only
 #Also default procedures for audit entry creation are deleted, and custom columns added
 #Classes used in script must be defined in config file
+#Also dont forget to change keahost and db variables
 
 #required mysql-connector-python
 import mysql.connector
