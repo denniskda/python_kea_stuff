@@ -72,5 +72,5 @@ sqlcursor = keadb.cursor()
 
 #timestamp and added_by columns are added manually instead of kea default audit options
 sqlcursor.execute(f"INSERT INTO `hosts` (`dhcp_identifier`, `dhcp_identifier_type`, `ipv4_address`, `dhcp4_subnet_id`, `dhcp4_client_classes`, `timestamp`, `added_by`) \
-                  VALUES ('0x{hwaddr}', '0', INET_ATON('{ipaddr}'), '{arg.subnet_id}', '{arg.devclass}', current_timestamp(), 'CURRENT_USER()')")
+                  VALUES ('0x{hwaddr}', '0', INET_ATON('{ipaddr}'), '{arg.subnet_id}', '{arg.devclass}', current_timestamp(), current_user())")
 keadb.commit()
